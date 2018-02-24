@@ -9,7 +9,6 @@ session_start();
 
 $retour = new stdClass();
 $retour->est_connecte = false;
-$retour->debug = var_export($_SESSION, true);
 
 if( isset($_SESSION['log']) && isset($_SESSION['pass']) ) {
     $retour->est_connecte = true;

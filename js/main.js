@@ -13,8 +13,6 @@
             url: "/json/est_connecte.php",
             method: "POST"
         }).done(function (data) {
-
-            console.log(data);
             if (typeof (data.est_connecte) !== "undefined") {
                 if (data.est_connecte) {
                     $("#deconnectionForm").show();

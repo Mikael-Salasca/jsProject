@@ -15,11 +15,13 @@ $retour->est_connecte =false;
 
 
 if( isset($_POST['log']) && isset($_POST['pass']) ) {
-    //on suppose logs corrects
-    $_SESSION['log'] = $_POST['log'];
-    $_SESSION['pass'] = $_POST['pass'];
-    $retour->est_connecte = true;
-    $retour->message = "ok";
+    if ($_POST['log']=='prof' && ($_POST['pass']=='prof')){
+        $_SESSION['log'] = $_POST['log'];
+        $_SESSION['pass'] = $_POST['pass'];
+        $retour->est_connecte = true;
+        $retour->message = "ok";
+    }
+
 }
 else {
     $retour->est_connecte = false;
