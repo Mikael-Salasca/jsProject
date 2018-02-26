@@ -16,6 +16,9 @@
             if (typeof (data.est_connecte) !== "undefined") {
                 if (data.est_connecte) {
                     $("#deconnectionForm").show();
+                    $("#taskCreation").show();
+
+
                 } else {
                     $("#connectionForm").show();
                 }
@@ -55,6 +58,21 @@
             }).fail(erreurCritique);
             return false;
         });
+
+        $('#taskCreation').submit(function () {
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function (data) {
+
+
+
+            }).fail(erreurCritique);
+            return false;
+        });
+
+
     });
 
 
