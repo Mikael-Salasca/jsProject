@@ -40,7 +40,7 @@
                     $("#connectionForm").show();
                 }
             }).fail(erreurCritique);
-            return false;
+            return false; //pour rester sur la page, plus agréable pour l'utilisateur
         });
         $('#deconnectionForm').submit(function () {
             $.ajax({
@@ -65,6 +65,7 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
+                alert("Tâche bien enregistrée");
 
 
 

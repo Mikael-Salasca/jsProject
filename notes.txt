@@ -2,5 +2,5 @@ quand on est co :
 - bouton déconnexion
 - bouton créer une tache -> formulaire de création de tache
 ressemblant à connexion 1er appel
-- afficher les taches déja créees
+- afficher les taches déja créees -- displaytasks
 -créer une classe tache
