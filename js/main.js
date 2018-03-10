@@ -65,12 +65,13 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-                alert("Tâche bien enregistrée");
+                console.log('tg');
+                alert("La tâche" +data.taskname + "a bien été enregistrée");
 
 
 
             }).fail(erreurCritique);
-            return false;
+            //return false;
         });
 
 
