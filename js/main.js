@@ -81,13 +81,15 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-                let tr = $('<tr/>');
 
                 for(let i=0; i < data.tabtask.length; ++i) {
-                    let td = $('<td />');
+                    let tr = $('<tr/>');
+                    let td1 = $('<td />');
+                    let td2 = $('<td />');
                     let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"]);
-                    td.html(currTask.name + ' ' + currTask.date);
-                    tr.append(td);
+                    td1.html(currTask.name);
+                    td2.html(currTask.date);
+                    tr.append(td1,td2);
                     $("#mes-taches").append(tr).show();
 
                 }
