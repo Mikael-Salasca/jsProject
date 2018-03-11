@@ -19,8 +19,10 @@
 //}
 
 
-$dbLink = mysqli_connect('mysql-mikaelsalasca.alwaysdata.net', '130266', '123456789')
+$db = mysqli_connect('mysql-mikaelsalasca.alwaysdata.net', '130266', '123456789')
 or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
-mysqli_select_db($dbLink , 'mikaelsalasca_post-it')
-or die('Erreur dans la sélection de la base : ' . mysqli_error($dbLink)
+mysqli_select_db($db , 'mikaelsalasca_post-it')
+or die('Erreur dans la sélection de la base : ' . mysqli_error($db)
 );
+
+?>
