@@ -9,11 +9,6 @@ let Task;
         this.name = name;
         this.date = date;
 
-
-
-
-
-
     };
 
 

@@ -71,7 +71,6 @@
                 alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date);
 
 
-
             }).fail(erreurCritique);
             return false;
         });
@@ -82,6 +81,18 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
+                let tr = $('<tr/>');
+
+                for(let i=0; i < data.tabtask.length; ++i) {
+                    let td = $('<td />');
+                    let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"]);
+                    td.html(currTask.name + ' ' + currTask.date);
+                    tr.append(td);
+                    $("#mes-taches").append(tr).show();
+
+                }
+
+
 
 
 
