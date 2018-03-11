@@ -11,6 +11,8 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Boostrap's css -->
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -31,11 +33,11 @@
 </form>
 
 <form id="taskCreation" action="/json/createtask.php" method="post" style="display: none;">
-    Nom de la tâche: <input  type="text" name="taskname"><br>
-    <input name="taskdate" type="date">
+    <label> Nom de la tâche:  </label> <input  type="text" name="taskname"><br>
+    <label> Date de rappel de la tâche:</label> <input name="taskdate" type="date"><br>
 
     <input type="submit" value="Créer rappel">
-</form>
+</form><br>
 
 <form id="taskDisplay" action="/json/displaytask.php" method="post" style="display: none;">
     <input type="submit" value="Afficher mes rappels">
