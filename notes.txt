@@ -1,6 +1,18 @@
-quand on est co :
-- bouton déconnexion
-- bouton créer une tache -> formulaire de création de tache
-ressemblant à connexion 1er appel
+sujet :
+the-future-of-post-it : faire un carnet de choses à faire pour les utilisateurs,
+ qui envoie des mails de rappel de ces choses à des dates données
+
+Connexion + déconnexion (vu en cours) OK
+!!! Effets jQuery sur les éléments !!!
+Appels JSON : au moins deux appels en plus de ceux vus en cours
+-> créer tache
+-> afficher les taches
+
+
 - afficher les taches déja créees -- displaytasks
--créer une classe tache
+
+-créer une classe Tache ?
+- nom
+- date du rappel
+
+

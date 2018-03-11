@@ -17,6 +17,8 @@
                 if (data.est_connecte) {
                     $("#deconnectionForm").show();
                     $("#taskCreation").show();
+                    $("#taskDisplay").show();
+
 
 
                 } else {
@@ -65,8 +67,22 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-                console.log('tg');
-                alert("La tâche" +data.taskname + "a bien été enregistrée");
+                let myTask = new Task(data.taskname,data.taskdate);
+                alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date);
+
+
+
+            }).fail(erreurCritique);
+            return false;
+        });
+
+        $('#taskDisplay').submit(function () {
+            $.ajax({
+                url: $(this).attr('action'),
+                method: $(this).attr('method'),
+                data: $(this).serialize()
+            }).done(function (data) {
+
 
 
 

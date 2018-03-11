@@ -34,13 +34,18 @@
     Nom de la tâche: <input  type="text" name="taskname"><br>
     <input name="taskdate" type="date">
 
-    <input type="submit" value="Créer tâche">
+    <input type="submit" value="Créer rappel">
+</form>
+
+<form id="taskDisplay" action="/json/displaytask.php" method="post" style="display: none;">
+    <input type="submit" value="Afficher mes rappels">
 </form>
 
 
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="js/vendor/jquery-3.2.1.min.js"></script>
 <script src="js/plugins.js"></script>
+<script src="js/task.js"></script>
 <script src="js/main.js"></script>
 
 
