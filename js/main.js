@@ -81,7 +81,8 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-
+                let mes_taches = $("#mes-taches");
+                mes_taches.empty();
                 for(let i=0; i < data.tabtask.length; ++i) {
                     let tr = $('<tr/>');
                     let td1 = $('<td />');
@@ -94,19 +95,40 @@
                     td3.html(currTask.time);
 
                     tr.append(td1,td2,td3);
-                    $("#mes-taches").append(tr).show();
+                    mes_taches.append(tr).show();
 
                 }
 
-                let css_noir = {
+                let css_darkgrey = {
                     //'background-image' : url('http://www.app-types.com/fr/app-type/219/widget-post-it'),
                     //'font-weight' : '',
+                    'background-color' : '#999999',
                     'color' : 'black',
                     'border' : 'solid 1px black',
                     'height' : '100px' ,
                     'width' : '100px'
                 };
-                $('td').css(css_noir);
+
+                let css_yellow = {
+                    //'background-image' : url('http://www.app-types.com/fr/app-type/219/widget-post-it'),
+                    //'font-weight' : '',
+                    'background-color' : '#ffffb3',
+                    'color' : 'black',
+                    'border' : 'solid 1px black',
+                    'height' : '100px' ,
+                    'width' : '100px'
+                };
+                let i = 0;
+                $('tr').each(function () {
+                    i++;
+                    if (i % 2) {
+                        $(this).css(css_darkgrey);
+                    }
+                    else {
+                        $(this).css(css_yellow);
+
+                    }
+                });
 
 
 
