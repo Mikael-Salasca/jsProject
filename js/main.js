@@ -84,13 +84,14 @@
                 let mes_taches = $("#mes-taches");
                 mes_taches.empty();
                 for(let i=0; i < data.tabtask.length; ++i) {
+
                     let tr = $('<tr/>');
                     let td1 = $('<td />');
                     let td2 = $('<td />');
                     let td3 = $('<td />');
 
                     let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"],data.tabtask[i]["TIME"]);
-                    td1.html(currTask.name);
+                    td1.html(currTask.getname());
                     td2.html(currTask.date);
                     td3.html(currTask.time);
 
