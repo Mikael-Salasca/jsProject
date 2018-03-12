@@ -99,14 +99,14 @@
                 }
 
                 let css_noir = {
-                    'background-color' : 'white',
+                    //'background-image' : url('http://www.app-types.com/fr/app-type/219/widget-post-it'),
                     //'font-weight' : '',
                     'color' : 'black',
                     'border' : 'solid 1px black',
-                    'height' : '40px' ,
+                    'height' : '100px' ,
                     'width' : '100px'
                 };
-                $('td').css(css_noir)
+                $('td').css(css_noir);
 
 
 
