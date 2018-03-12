@@ -93,12 +93,20 @@
                     td2.html(currTask.date);
                     td3.html(currTask.time);
 
-                    tr.append(td1,td2);
+                    tr.append(td1,td2,td3);
                     $("#mes-taches").append(tr).show();
 
                 }
 
-
+                let css_noir = {
+                    'background-color' : 'white',
+                    //'font-weight' : '',
+                    'color' : 'black',
+                    'border' : 'solid 1px black',
+                    'height' : '40px' ,
+                    'width' : '100px'
+                };
+                $('td').css(css_noir)
 
 
 

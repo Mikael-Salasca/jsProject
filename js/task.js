@@ -12,5 +12,9 @@ let Task;
 
     };
 
+    // function sendMail(){
+    //     window.open('mailto:test@example.com');
+    // }
+
 
 })();
