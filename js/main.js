@@ -67,8 +67,8 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-                let myTask = new Task(data.taskname,data.taskdate);
-                alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date);
+                let myTask = new Task(data.taskname,data.taskdate,data.tasktime);
+                alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date + ' à ' + myTask.time);
 
 
             }).fail(erreurCritique);
@@ -86,9 +86,13 @@
                     let tr = $('<tr/>');
                     let td1 = $('<td />');
                     let td2 = $('<td />');
-                    let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"]);
+                    let td3 = $('<td />');
+
+                    let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"],data.tabtask[i]["TIME"]);
                     td1.html(currTask.name);
                     td2.html(currTask.date);
+                    td3.html(currTask.time);
+
                     tr.append(td1,td2);
                     $("#mes-taches").append(tr).show();
 
