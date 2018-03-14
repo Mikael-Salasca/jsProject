@@ -146,6 +146,14 @@
 
     });
 
+    $("#taskHide").click(function(){
+
+        $("#mes-taches").hide();
+    });
+
+
+
+
 
 
 
