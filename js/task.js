@@ -16,11 +16,21 @@ class Task {
     }
 
     getdate() {
-        return this.name;
+        if (!this.date){
+            return alert('date de la tâche non renseigée !')
+        }
+        else return this.date;
+
+
     }
 
-    getdate() {
-        return this.name;
+    gettime() {
+        if (!this.time){
+            return alert('heure de la tâche non renseigée !')
+        }
+        else return this.time;
+
+
     }
 
 }

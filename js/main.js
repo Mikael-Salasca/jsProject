@@ -92,8 +92,8 @@
 
                     let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"],data.tabtask[i]["TIME"]);
                     td1.html(currTask.getname());
-                    td2.html(currTask.date);
-                    td3.html(currTask.time);
+                    td2.html(currTask.getdate());
+                    td3.html(currTask.gettime());
 
                     tr.append(td1,td2,td3);
                     mes_taches.append(tr).show();
