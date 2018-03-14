@@ -5,7 +5,6 @@
  * Date: 26/02/18
  * Time: 15:08
  **/
-phpinfo(); ?>
 
 session_start();
 $retour = new stdClass();
