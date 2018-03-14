@@ -108,7 +108,7 @@
                     //'font-weight' : '',
                     'background-color' : '#999999',
                     'color' : 'black',
-                    'border' : 'solid 1px black',
+                    // 'border' : 'solid 1px black',
                     'height' : '100px' ,
                     'width' : '100px'
                 };
@@ -118,7 +118,6 @@
                     //'font-weight' : '',
                     'background-color' : '#ffffb3',
                     'color' : 'black',
-                    'border' : 'solid 1px black',
                     'height' : '100px' ,
                     'width' : '100px'
                 };
@@ -133,6 +132,7 @@
 
                     }
                 });
+                $('td').css('border : solid 1px black')
 
 
 
