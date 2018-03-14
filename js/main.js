@@ -76,6 +76,8 @@
         });
 
         $('#taskDisplay').submit(function () {
+            $("#taskHide").show();
+
             $.ajax({
                 url: $(this).attr('action'),
                 method: $(this).attr('method'),
@@ -97,6 +99,7 @@
 
                     tr.append(td1,td2,td3);
                     mes_taches.append(tr).show();
+
 
                 }
 
@@ -130,6 +133,8 @@
 
                     }
                 });
+
+
 
 
 
