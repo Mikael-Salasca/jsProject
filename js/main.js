@@ -22,10 +22,10 @@
 
 
                 } else {
-                    $("#connectionForm").show();
+                    $("#connectionForm").fadeIn(1000);
                 }
             } else {
-                $("#connectionForm").show();
+                $("#connectionForm").fadeIn(1000);
             }
         }).fail(erreurCritique);
         $('#connectionForm').submit(function () {
@@ -41,7 +41,6 @@
                         alert(data.message);
                     }
                 } else {
-                    alert('ok');
                     $("#connectionForm").show();
                 }
             }).fail(erreurCritique);
@@ -70,8 +69,12 @@
                 method: $(this).attr('method'),
                 data: $(this).serialize()
             }).done(function (data) {
-                let myTask = new Task(data.taskname,data.taskdate,data.tasktime);
-                alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date + ' à ' + myTask.time);
+                if ( !data.taskname || !data.taskdate || !data.tasktime)
+                    alert('Veuillez renseigner tous les champs');
+                else {
+                    let myTask = new Task(data.taskname,data.taskdate,data.tasktime);
+                    alert("La tâche " +myTask.name + " a bien été enregistrée, un mail vous sera envoyé le " + myTask.date + ' à ' + myTask.time);
+                }
 
 
             }).fail(erreurCritique);
@@ -79,7 +82,7 @@
         });
 
         $('#taskDisplay').submit(function () {
-            $("#taskHide").show();
+            $("#taskHide").fadeIn(1000);
 
             $.ajax({
                 url: $(this).attr('action'),
@@ -97,11 +100,22 @@
 
                     let currTask = new Task(data.tabtask[i]["NAME"],data.tabtask[i]["DATE"],data.tabtask[i]["TIME"]);
                     td1.html(currTask.getname());
-                    td2.html(currTask.getdate());
-                    td3.html(currTask.gettime());
+                    td2.html('le ' + currTask.getdate());
+                    td3.html('à ' + currTask.gettime());
 
-                    tr.append(td1,td2,td3);
-                    mes_taches.append(tr).show();
+                    let td4 = $('<td />');
+                    td4.css('width','50px');
+                    let input = $('<input />');
+                    input.attr("type", "checkbox");
+                    td4.append(input);
+
+                    tr.append(td1,td2,td3,td4);
+                    mes_taches.append(tr).fadeIn(1000);
+
+
+
+                    mes_taches.append()
+
 
 
                 }
@@ -151,7 +165,7 @@
 
     $("#taskHide").click(function(){
 
-        $("#mes-taches").hide();
+        $("#mes-taches").fadeOut(1000);
     });
 
 
