@@ -35,6 +35,6 @@ class Task {
 
 }
 // function sendMail(){
-    //     window.open('mailto:test@example.com');
-    // je ne peux pas le faire, c'est côté serveur avec cron
-    // }
+//     window.open('mailto:test@example.com');
+// côté serveur avec cron
+// }

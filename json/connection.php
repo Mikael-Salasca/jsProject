@@ -15,7 +15,7 @@ $retour->est_connecte =false;
 
 
 if( isset($_POST['log']) && isset($_POST['pass']) ) {
-    if ($_POST['log']=='prof' && ($_POST['pass']=='prof')){
+    if ($_POST['log']=='prof' && ($_POST['pass']=='proftest')){
         $_SESSION['log'] = $_POST['log'];
         $_SESSION['pass'] = $_POST['pass'];
         $retour->est_connecte = true;

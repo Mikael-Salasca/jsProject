@@ -103,13 +103,13 @@
                     td2.html('le ' + currTask.getdate());
                     td3.html('à ' + currTask.gettime());
 
-                    let td4 = $('<td />');
-                    td4.css('width','50px');
-                    let input = $('<input />');
-                    input.attr("type", "checkbox");
-                    td4.append(input);
+                    // let td4 = $('<td />');
+                    // td4.css('width','50px');
+                    // let input = $('<input />');
+                    // input.attr("type", "checkbox");
+                    // td4.append(input);
 
-                    tr.append(td1,td2,td3,td4);
+                    tr.append(td1,td2,td3);//,td4);
                     mes_taches.append(tr).fadeIn(1000);
 
 
