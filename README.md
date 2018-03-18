@@ -10,11 +10,15 @@ deadline : 18/03
 130266
 
 to-do :
--masquer et supprimer taches
 -effets jQuery ! 
 -emoticones pr importances des tâches !
+
+- supprimer tache
 -css a ameliorer
 - calendar
 
 
 + getters à vérifier
+checker indentation
+ecma6
+mettre à jour le readme

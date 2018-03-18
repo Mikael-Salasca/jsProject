@@ -21,8 +21,11 @@
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-<header>
-    <div class="page-header">
+
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
         <form id="connectionForm" action="/json/connection.php" method="post" style="display: none;">
             Login: <input required type="text" name="log"> Mot de passe: <input type="password" name="pass" required> <input type="submit" value="Connexion">
         </form>
@@ -30,33 +33,35 @@
         <form id="deconnectionForm" action="/json/deconnection.php" method="post" style="display: none;">
             <input type="submit" value="Déconnexion">
         </form>
-
     </div>
-
-</header>
+</nav>
 
 <div class="jumbotron">
-
-    <h1> Le futur du post-it</h1>
-
+    <div class="container text-center">
 
 
+        <h1> Le futur du post-it</h1>
 
-<form id="taskCreation" action="/json/createtask.php" method="post" style="display: none;">
-    <label> Nom de la tâche:  </label> <input   type="text" name="taskname"><br>
-    <label> Date de rappel de la tâche:</label> <input name="taskdate" type="date"><br>
-    <label> Heure souhaitée pour le mail:</label> <input name="tasktime" type="time"><br>
-    <input type="submit" value="Créer rappel">
-</form><br>
 
-    <form id="taskDisplay" action="/json/displaytask.php" method="post" style="display: none;">
-        <input type="submit" value="Afficher mes rappels">
-        <input id="taskHide" type="button" value="Masquer les tâches" style="display: none;">
-    </form>
 
-    <table id="mes-taches"  style="display: none;">
 
-    </table>
+        <form id="taskCreation" action="/json/createtask.php" method="post" style="display: none;">
+            <label> Nom de la tâche:  </label> <input   type="text" name="taskname"><br>
+            <label> Date de rappel de la tâche:</label> <input name="taskdate" type="date"><br>
+            <label> Heure souhaitée pour le mail:</label> <input name="tasktime" type="time"><br>
+            <input type="submit" value="Créer rappel">
+        </form><br>
+
+        <form id="taskDisplay" action="/json/displaytask.php" method="post" style="display: none;">
+            <input type="submit" value="Afficher mes rappels">
+            <input id="taskHide" type="button" value="Masquer les tâches" style="display: none;">
+        </form>
+
+        <table id="mes-taches"  style="display: none;">
+
+        </table>
+    </div>
+</div>
 </div>
 
 
