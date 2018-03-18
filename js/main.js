@@ -37,8 +37,11 @@
                 if (typeof (data.est_connecte) !== "undefined") {
                     if (data.est_connecte) {
                         window.location.reload(true);
+                    } else {
+                        alert(data.message);
                     }
                 } else {
+                    alert('ok');
                     $("#connectionForm").show();
                 }
             }).fail(erreurCritique);

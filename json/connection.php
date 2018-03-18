@@ -21,11 +21,11 @@ if( isset($_POST['log']) && isset($_POST['pass']) ) {
         $retour->est_connecte = true;
         $retour->message = "ok";
     }
+    else {
+        $retour->est_connecte = false;
+        $retour->message = "Login ou mot de passe incorrect, veuillez réessayer";
 
-}
-else {
-    $retour->est_connecte = false;
-    $retour->message = "Mauvais logs";
+    }
 
 }
 
